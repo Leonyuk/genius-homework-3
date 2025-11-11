@@ -1,0 +1,150 @@
+
+:root {
+    /* --color-brand:#2B7FFF; */
+    --color-primary-dark: #000000;
+    --color-primary-light: #ffffff;
+    --color-secondary-dark: #011C44;
+    --color-secondary-grey: #4a4a4a;
+    --color-background-footer: #011F4A;
+}
+
+body {
+    --color-brand: #2B7FFF;
+}
+ul {
+    list-style-type: none;
+}
+
+.header-link {
+    color: var(--color-brand);
+}
+
+.header-link:hover {
+    color: var(--color-secondary-dark);
+}
+
+.hero-button {
+    border: 2px solid var(--color-brand);
+    border-radius: 32px;
+    padding: 16px 32px;
+    width: 219px;
+    height: 53px;
+    background: var(--color-brand);
+    font-family: 'Roboto SemiBold', sans-serif;   
+    font-weight: 600;    
+    font-size: 12px;       
+    color: var(--color-primary-light);
+    cursor: pointer;
+}
+
+.hero-button:hover {
+    background-color: transparent;
+    color: var(--color-primary-dark);
+}
+
+
+.hero {
+
+}
+
+.hero-subtitle {
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--color-secondary-dark);
+}
+
+.hero-title {
+    color: var(--color-brand);
+    -webkit-text-stroke: 1px var(--color-primary-dark);
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 140px;
+    line-height: 81%;
+    text-transform: capitalize;
+}
+
+.hero-offer {
+    color: var(--color-secondary-grey);
+
+}
+
+.about-us-section {
+
+}
+
+.section-title {
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 64px;
+    color: var(--color-secondary-dark);
+}
+
+ .section-title .accent {
+    text-transform: capitalize;
+    color: var(--color-brand);
+}
+
+.about-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 173%;
+    color: var(--color-secondary-dark);
+}
+/* Основний контейнер секції (для відступів, фону, вирівнювання) */
+.why-us {
+
+}
+/* Контейнер для списку з пунктами (зручно задати flex/grid) */
+.why-us-list {
+
+}
+/* Окремий елемент списку (щоб задати відступи між блоками) */
+.why-us-item {
+
+}
+/* Для керування розташуванням іконки та підпису разом */
+.why-us-figure {
+
+}
+/* Для стилізації SVG-іконок (розмір, колір, відступи) */
+.why-us-icon {
+
+}
+/* Для стилю текстового підпису під іконкою */
+.figcaption-style {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    text-align: center;
+    color: var(--color-primary-dark);
+}
+
+
+.article-title {
+    color: var(--color-primary-light);
+ }
+
+
+
+.footer {
+    background-color: var(--color-background-footer);
+}
+
+.footer-link {
+    color: var(--color-primary-light);
+}
+
+.footer-link:hover {
+    color: var(--color-secondary-dark);
+}
+
+.footer-address {
+    color: var(--color-primary-light);
+}
+
+.social-icon {
+    filter: brightness(0) invert(1);
+}
