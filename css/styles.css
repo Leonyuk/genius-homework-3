@@ -615,7 +615,7 @@ address {
   background-size: cover;
   background-position: center bottom;
   overflow: hidden;
-  padding: 56px 100px;
+  padding: 56px 0px;
 }
 
 .footer-container {
