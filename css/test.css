@@ -2,38 +2,77 @@
   box-sizing: border-box;
 }
 
-.container {
-  padding: 30px;
-  border: 1px dotted black;
-}
-
 .parent {
+  display: flex;
+  align-items: center;
+  gap: 40px;
   padding: 20px;
   border: 1px dotted black;
 }
 
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
 .item.red {
-  position: relative;
   width: 150px;
   height: 150px;
   background-color: red;
-  color: white;
+  transform: translateY(-50px);
+  transition: property background-color;
+  transition-duration: 1s;
+}
+
+.item.red:hover {
+  background-color: pink;
 }
 
 .item.green {
   width: 100px;
   height: 100px;
   background-color: green;
+  animation-name: spin;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    background-color: green;
+  }
+  25% {
+    transform: rotate(180deg);
+    background-color: red;
+  }
+  50% {
+    transform: rotate(360deg);
+    background-color: green;
+  }
+  75% {
+    transform: rotate(-180deg);
+    background-color: red;
+  }
+  100% {
+    transform: rotate(0deg);
+    background-color: green;
+  }
 }
 
 .item.blue {
   width: 50px;
   height: 50px;
   background-color: blue;
+  transform: scale(1.5);
 }
 
-.section-title {
-  position: sticky;
-  top: 0;
-  background-color: blueviolet;
+.item.orange {
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  transform: skew(20deg, 20deg);
 }

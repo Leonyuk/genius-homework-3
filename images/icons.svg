@@ -49,5 +49,11 @@
 <symbol id="icon-Arrow-1-left" viewBox="0 0 38 32">
 <path d="M0.625 17.218c-0.386-0.386-0.625-0.919-0.625-1.508s0.239-1.122 0.625-1.508l13.577-13.577c0.39-0.415 0.942-0.673 1.555-0.673 1.178 0 2.133 0.955 2.133 2.133 0 0.613-0.259 1.166-0.673 1.555l-0.001 0.001-12.066 12.068 12.068 12.068c0.402 0.388 0.651 0.932 0.651 1.534 0 1.178-0.955 2.133-2.133 2.133-0.602 0-1.146-0.249-1.534-0.651l-0.001-0.001zM37.892 17.843h-35.759v-4.267h35.759z"></path>
 </symbol>
+<symbol id="icon-Vector-top" viewBox="0 0 52 32">
+<path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="5.8182" d="M2.909 2.909l23.273 23.273 23.273-23.273"></path>
+</symbol>
+<symbol id="icon-Vector-buttom" viewBox="0 0 52 32">
+<path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="5.8182" d="M2.909 27.386l23.273-23.273 23.273 23.273"></path>
+</symbol>
 </defs>
 </svg>
