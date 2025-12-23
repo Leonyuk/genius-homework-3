@@ -1,0 +1,108 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.2s, visibility 0.2s;
+  z-index: 100; // Додано, щоб модалка завжди була зверху
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  height: 100%;
+  max-height: 680px;
+  padding: 42px 144px;
+  background-color: var(--color-secondary-dark);
+  background-image: url('../images/img/modal_background_vektor.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 48px;
+  overflow-y: auto;
+
+  .modal-close-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    // Додайте стилі для кнопки закриття
+  }
+
+  .modal-close-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    color: var(--color-primary-light);
+    fill: currentColor;
+  }
+}
+
+.form {
+  &_title {
+    margin-bottom: 40px;
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 64px;
+    text-align: center;
+    color: var(--color-primary-light);
+  }
+
+  &_text {
+    margin-bottom: 32px;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+    color: var(--color-primary-light);
+  }
+
+  &_field {
+    margin: 0 auto 24px;
+    max-width: 310px;
+  }
+
+  &_input {
+    width: 100%;
+    padding: 18px 32px;
+    border: 2px solid var(--color-modal-form);
+    border-radius: 32px;
+    font-family: var(--font-main);
+    font-size: 13px;
+    line-height: 1.5;
+    background-color: transparent;
+    color: var(--color-primary-light);
+    transition: background-color 0.3s;
+
+    &:focus {
+      outline: none;
+      background-color: var(--color-modal-form);
+    }
+
+    &::placeholder {
+      color: var(--color-primary-light);
+    }
+  }
+
+  &_policy {
+    margin: 8px auto;
+    max-width: 210px;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--color-modal-form);
+  }
+}

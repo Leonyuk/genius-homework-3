@@ -1,0 +1,85 @@
+// scss/components/_footer.scss
+
+.footer-section {
+  position: relative;
+  background-image: url('../images/img/bg-footer.png.png'); 
+  background-color: var(--color-secondary-dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  overflow: hidden;
+  padding: 56px 0;
+  margin: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url('../images/img/footer-PhotoRoom.png');
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 150px;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+.footer-nav,
+.footer-address {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+
+.footer-logo {
+  flex-grow: 1;
+}
+
+.footer-nav-list,
+.footer-contacts,
+.footer-address-list,
+.footer-legal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+
+  .footer-social-icon {
+    width: 42px;
+    height: 42px;
+    fill: var(--color-primary-light);
+    transition: fill 0.3s;
+
+    &:hover {
+      fill: var(--color-brand);
+    }
+  }
+}
+
+.footer-policy {
+  font-size: 16px;
+  color: var(--color-primary-light);
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--color-brand);
+  }
+}
+
+.footer-copyright {
+  color: var(--color-secondary-grey);
+  font-size: 13px;
+}
