@@ -28,32 +28,33 @@
     padding: 16px 32px;
     height: 54px;
     border: 2px solid var(--color-brand);
-    background-color: transparent;
+    background-color: var(--color-brand);
     border-radius: 48px;
     color: var(--color-primary-dark);
     font-weight: 600;
     font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s;
 
     &:hover {
-      background-color: var(--color-brand);
+      background-color: transparent;
       color: var(--color-primary-light);
     }
   }
+}
+.form-terms {
+  &__policy {
+    margin-top: 8px;
+    font-size: 12px;
+    text-align: center;
+    color: var(--color-modal-form);
+    line-height: 1.33;
+  }
 
-  .form-terms {
-    &__policy {
-      margin-top: 8px;
-      font-size: 12px;
-      text-align: center;
-      color: var(--color-modal-form);
-      line-height: 1.33;
-    }
-
-    &__link {
-      color: var(--color-modal-form);
-      text-decoration: underline;
-    }
+  &__link {
+    color: var(--color-modal-form);
+    text-decoration: underline;
   }
 }
