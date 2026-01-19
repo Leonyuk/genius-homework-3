@@ -51,4 +51,18 @@
   &__social-icon {
     fill: var(--color-secondary-dark);
   }
+
+  .socials--header {
+    gap: 32px;
+
+    .socials__icon {
+      width: 32px;
+      height: 32px;
+      fill: var(--color-secondary-dark);
+    }
+
+    .socials__link:hover {
+      fill: var(--color-primary-dark);
+    }
+  }
 }
