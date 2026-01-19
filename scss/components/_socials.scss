@@ -1,0 +1,23 @@
+.socials {
+  display: flex;
+  gap: 24px;
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    display: inline-flex;
+  }
+
+  &__icon {
+    width: 42px;
+    height: 42px;
+    fill: var(--color-primary-light);
+    transition: fill 0.2s;
+  }
+
+  &__link:hover {
+    fill: var(--color-primary-dark);
+  }
+}
