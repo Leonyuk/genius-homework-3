@@ -5,47 +5,50 @@
   font-weight: 400;
   text-decoration: none;
   transition: color 0.2s;
+
+  &:hover {
+    color: var(--color-brand);
+  }
 }
 
-.header__link:hover {
-  color: var(--color-brand);
-}
-
-.header-social-link {
+.header__social-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-.footer-link {
+.footer__link {
   font-family: var(--font-main);
   font-weight: 400;
   font-size: 16px;
   color: var(--color-primary-light);
   text-decoration: none;
   transition: color 0.2s;
+
+  &:hover {
+    color: var(--color-primary-dark);
+  }
 }
 
-.footer-address-link {
+.footer__address-link {
   font-family: var(--font-main);
   font-weight: 400;
   font-size: 16px;
   color: var(--color-primary-light);
   text-decoration: none;
   transition: color 0.2s;
+
+  &:hover {
+    color: var(--color-primary-dark);
+  }
 }
 
-.footer-address-link:hover {
-  color: var(--color-primary-dark);
-}
-  
-
-.footer-social-link {
+.footer__social-link {
   color: var(--color-primary-light);
-}
 
-.footer-link:hover {
-  color: var(--color-primary-dark);
+  &:hover {
+    color: var(--color-primary-dark);
+  }
 }
 
 .form_policy_link {
