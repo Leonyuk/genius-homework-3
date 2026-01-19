@@ -42,16 +42,6 @@
     display: block;
   }
 
-  &__social-menu {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-  }
-
-  &__social-icon {
-    fill: var(--color-secondary-dark);
-  }
-
   .socials--header {
     gap: 32px;
 
