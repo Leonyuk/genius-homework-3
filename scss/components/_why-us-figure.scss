@@ -1,5 +1,14 @@
 .why-us-figure {
-  margin: 24px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  
+  @media screen and (min-width: $bp-desktop) {
+    margin: 24px 0;
+  }
 
   &__icon {
     width: 48px;

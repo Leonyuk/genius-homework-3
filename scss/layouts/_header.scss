@@ -1,16 +1,16 @@
 .header {
   position: absolute;
-  left: 0px;
+  left: 0;
   top: 16px;
   width: 100%;
   z-index: 100;
-  padding-top: 0px;
+  // padding-top: 0px;
 
   @media screen and (min-width: $bp-desktop) {
     // height: 106px;
     // align-content: center;
-    left: 1px;
-    top: 0px;
+    left: 0;
+    top: 0;
     padding: 32px 0;
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.25);
@@ -26,6 +26,7 @@
     display: flex;
     align-items: center;
     flex-grow: 1;
+
     @media screen and (min-width: $bp-desktop) {
       gap: 40px;
     }
@@ -64,24 +65,25 @@
 
   &__address {
     display: none;
+
     @media screen and (min-width: $bp-desktop) {
       display: block;
     }
   }
 
   &__burger {
-    
     width: 24px; 
     height: 24px;
     padding: 0;
     background-color: transparent;
     border: none;
     fill: var(--color-primary-light);
+    
     @media screen and (min-width: $bp-desktop) {
       display: none;
     }
   }
-
+}
   .socials--header {
     gap: 32px;
 
@@ -95,4 +97,4 @@
       fill: var(--color-primary-dark);
     }
   }
-}
+

@@ -18,6 +18,13 @@
   background-image: url(../images/img/background.png);
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: cover;
-  padding-top: 100px;
+  background-size: 100% auto;
+  padding: 100px;
+
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url("../images/img/background@2x.png");
+  }
 }
