@@ -1,0 +1,28 @@
+.pagination {
+  display: none;
+
+  @media screen and (min-width: $bp-desktop) {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    &__button {
+      width: 12px;
+      height: 12px;
+      padding: 0;
+      background-color: var(--color-modal-form);
+      border-radius: 50%;
+      border-color: transparent;
+    }
+
+    &__button:hover {
+      background-color: var(--color-brand);
+    }
+
+    &__button--active {
+      background-color: var(--color-brand);
+    }
+  }
+}
