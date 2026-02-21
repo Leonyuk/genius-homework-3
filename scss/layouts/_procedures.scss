@@ -113,8 +113,124 @@
 //     transform: scale(0.95);
 //   }
 // }
+
+// .swiper-wrapper {
+//   width: 1064px;
+// }
+// .container-box {
+//   width: 100%;
+//   margin: 0 auto;
+//   max-width: 1288px;
+//   padding: 24px;
+// }
+// .procedures {
+//   &__slider {
+//     display: flex;
+//     gap: 32px;
+//     align-items: center;
+//     justify-content: center;
+//   }
+//   &__container {
+//     overflow: hidden;
+//   }
+
+//   &__list {
+//     margin-bottom: 32px;
+//   }
+//   &__carusl-button {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     width: 44px;
+//     height: 44px;
+//     background-color: transparent;
+//     padding: 0px;
+//     border: 1px solid var(--beauty-landing-2-c1);
+//     border-radius: 50%;
+//     cursor: pointer;
+//     fill: var(--beauty-landing-2-c1);
+
+//     @media screen and (max-width: $bp-desktop) {
+//       display: none;
+//     }
+//   }
+
+//   &__proc-windows {
+//     position: relative;
+//     -webkit-transform: scale(1);
+//     transform: scale(1);
+//     transition: transform 0.3s ease;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+
+//   &__proc-img-fon {
+//     position: absolute;
+//     top: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-repeat: no-repeat;
+//     width: 344px;
+//     height: 456px;
+//     border-radius: 4px 120px;
+//     z-index: -1;
+//   }
+
+//   &__rigth {
+//     transform: rotate(0deg);
+//   }
+
+//   &__proc-text {
+//     width: 152px;
+//     height: 52px;
+//     text-align: center;
+//     margin: 40px;
+//   }
+
+//   &__text-proc {
+//     font-family: var(--font-family);
+//     font-weight: 400;
+//     font-size: 22px;
+//     line-height: 118%;
+//     text-align: center;
+//     color: var(--beauty-landing-2-background);
+//   }
+
+//   &__proc-class {
+//     background: linear-gradient(
+//       180deg,
+//       rgba(1, 28, 68, 0) 47.4%,
+//       rgba(1, 28, 68, 0.73) 82.66%,
+//       #011c44 99.06%
+//     );
+//     background-repeat: no-repeat;
+//     background-position: right top;
+//     background-size: cover;
+//     display: flex;
+
+//     width: 344px;
+//     height: 456px;
+//     align-items: flex-end;
+//     justify-content: center;
+//     border-radius: 4px 120px;
+//   }
+
+//   &__carusl-button:hover {
+//     border: 1px solid var(--beauty-landing-2-background);
+//     background-color: #2b7fff;
+//     color: var(--beauty-landing-2-background);
+//     background-color: var(--beauty-landing-2-s2);
+//     border: var(--beauty-landing-2-s2);
+//     fill: var(--beauty-landing-2-background);
+//   }
+
+//   &__proc-windows:hover {
+//     transform: scale(0.95);
+//   }
+// }
 .procedures {
-  // 1. Загальний контейнер (центрування заголовка та секції)
+ 
   .container-box {
     width: 100%;
     max-width: 1288px;
@@ -141,17 +257,20 @@
     }
   }
 
-  // 2. Слайдер та Список
+  
   &__slider {
     display: flex;
-    gap: 32px;
+    gap: 0;
     align-items: center;
     justify-content: center;
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 32px;
+    }
   }
 
   &__container {
-    overflow: hidden;
-   
+    // overflow: hidden;
   }
 
   &__list {
@@ -170,7 +289,7 @@
     justify-content: center;
 
     width: 100%;
-    max-width: 320px;
+    max-width: 100%;
     height: 416px;
     padding-bottom: 32px;
     margin: 0 auto;
@@ -201,8 +320,8 @@
       transition: background-image 0.4s ease-in-out;
     }
 
-    &:hover::before {
-      @media screen and (min-width: $bp-desktop) {
+    @media screen and (min-width: $bp-desktop) {
+      &:hover::before {
         background-image: linear-gradient(
           180deg,
           rgba(1, 28, 68, 0.1) 40%,
@@ -212,7 +331,7 @@
     }
   }
 
-  // 4. Картинка (фон)
+  
   &__proc-img-fon {
     width: 100%;
     height: 100%;
@@ -222,7 +341,7 @@
     z-index: 0;
   }
 
-  // 5. Текст (над градієнтом)
+  
   &__text-proc {
     position: relative;
     z-index: 2;
@@ -241,9 +360,9 @@
     }
   }
 
-  // 6. Кнопки керування
+  
   &__carusl-button {
-    display: none; // Приховуємо на мобільних
+    display: none; 
 
     @media screen and (min-width: $bp-desktop) {
       display: flex;
@@ -268,7 +387,7 @@
   }
 
   &__rigth {
-    // Якщо іконка стрілки однакова, розгортаємо праву кнопку
+    
     transform: rotate(0deg);
   }
 }

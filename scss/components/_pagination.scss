@@ -1,11 +1,12 @@
 .pagination {
-  display: none;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 
   @media screen and (min-width: $bp-desktop) {
     margin-top: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 24px;
 
     &__button {
