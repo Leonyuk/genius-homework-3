@@ -1,23 +1,35 @@
+
 .contact-form {
   position: relative;
   width: 100%;
   max-width: 422px;
-  height: 100%;
-  max-height: 482px;
-  padding: 48px 56px;
+  margin: 0 auto;
+  padding: 42px 20px;
   border-radius: 32px;
   background-color: var(--color-secondary-dark);
   background-image: url("../images/img/bgc_contact_forms.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: auto;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding: 48px 56px;
+    height: 482px;
+  }
 
   &__title {
-    margin-bottom: 32px;
-    font-size: 22px;
+    margin-bottom: 20px;
+    font-size: 20px;
     font-weight: 600;
     text-align: center;
     color: var(--color-primary-light);
+    line-height: 1.3;
+
+    @media screen and (min-width: $bp-desktop) {
+      margin-bottom: 32px;
+      font-size: 22px;
+    }
   }
 
   &__field {
@@ -25,36 +37,60 @@
   }
 
   &__button {
-    padding: 16px 32px;
-    height: 54px;
+    margin: 0 auto 8px;
+    padding: 12px 24px;
+    width: 241px;
+    height: 44px;
+    border-radius: 24px;
+    font-weight: 600;
+    font-size: 15px;
     border: 2px solid var(--color-brand);
     background-color: var(--color-brand);
-    border-radius: 48px;
     color: var(--color-primary-light);
-    font-weight: 600;
-    font-size: 18px;
-    cursor: pointer;
-    transition:
-      background-color 0.2s,
-      color 0.2s;
 
-    &:hover {
-      background-color: transparent;
-      color: var(--color-primary-dark);
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+      width: 100%; 
+      margin: 0 auto 8px;
+      padding: 16px 32px;
+      height: auto; 
+      min-height: 54px;
+      border: 2px solid var(--color-brand);
+      background-color: var(--color-brand);
+      border-radius: 48px;
+      color: var(--color-primary-light);
+      font-weight: 600;
+      font-size: 18px;
+      cursor: pointer;
+      transition:
+        background-color 0.2s,
+        color 0.2s,
+        border-color 0.2s;
+
+      &:hover {
+        background-color: transparent;
+        color: var(--color-primary-light);
+        border-color: var(--color-primary-light);
+      }
     }
   }
 }
+
 .form-terms {
   &__policy {
-    margin-top: 8px;
+    margin-top: 0;
+    font-weight: 400;
     font-size: 12px;
+    line-height: 1.5;
     text-align: center;
     color: var(--color-modal-form);
-    line-height: 1.33;
+    max-width: 220px;
+    margin: 0 auto;
   }
 
   &__link {
     color: var(--color-modal-form);
     text-decoration: underline;
+    text-underline-offset: 2px;
   }
 }

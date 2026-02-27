@@ -1,4 +1,10 @@
 .procedures {
+  padding: 20px 0 20px;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding: 56px 0 48px;
+  }
+
   .container-box {
     width: 100%;
     max-width: 1288px;
