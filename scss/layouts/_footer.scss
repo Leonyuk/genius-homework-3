@@ -1,45 +1,62 @@
 .footer {
+  padding: 56px 0;
   position: relative;
+  text-align: center;
   background-color: var(--color-secondary-dark);
-  background-image: url(../images/img/bg-footer.png);
+  background-image: url(../images/img/bg-footer@2x.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
   overflow: hidden;
-  padding: 56px 0;
   margin: 0px;
 
+  @media screen and (min-width: $bp-tablet) {
+    text-align: left;
+    background-image: url(../images/img/bg-footer.png);
+  }
+
   &::after {
-    position: absolute;
-    background-image: url(../images/img/footer-PhotoRoom.png);
-    background-repeat: no-repeat;
-    width: 250px;
-    height: 150px;
-    bottom: 0;
-    right: 0;
     content: "";
+    position: absolute;
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+      background-image: url(../images/img/footer-PhotoRoom.png);
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 150px;
+      bottom: 0;
+      right: 0;
+    }
   }
 
   &__container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-  }
-
-  &__nav {
-    display: flex;
-    flex-basis: 50%;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+    }
   }
 
   &__logo {
-    font-family: var(--font-title);
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 0.88;
-    text-transform: capitalize;
-    color: var(--color-brand);
-    flex-grow: 1;
+    margin-bottom: 42px;
+    font-size: 16px;
+    line-height: 0.94;
+    @media screen and (min-width: $bp-tablet) {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 0.88;
+      text-transform: capitalize;
+      color: var(--color-brand);
+      flex-grow: 1;
+    }
   }
 
   &__menu {
@@ -50,10 +67,18 @@
     justify-content: start;
   }
 
+  &__nav,
   &__address {
     display: flex;
-    flex-basis: 50%;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      align-items: flex-start;
+      flex-basis: 50%;
+      // gap: 16px;
+    }
   }
 
   &__contacts {
@@ -64,19 +89,25 @@
   }
 
   &__address-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    display: none;
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
   }
 
   &__socials {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 24px;
+    justify-content: center;
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 24px;
+    }
   }
-
 
   &__legal {
     display: flex;

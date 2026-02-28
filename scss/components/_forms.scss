@@ -7,7 +7,7 @@
   padding: 42px 20px;
   border-radius: 32px;
   background-color: var(--color-secondary-dark);
-  background-image: url("../images/img/bgc_contact_forms.png");
+  background-image: url("../images/img/bgc_contact_forms@2x.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -16,6 +16,7 @@
   @media screen and (min-width: $bp-desktop) {
     padding: 48px 56px;
     height: 482px;
+    background-image: url("../images/img/bgc_contact_forms.png");
   }
 
   &__title {
