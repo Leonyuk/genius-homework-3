@@ -1,7 +1,9 @@
 
 .contacts-section {
   padding: 20px 0 0;
-
+@media screen and (min-width: $bp-desktop) {
+     padding: 46px 0 46px;
+    }
   &__content {
     display: flex;
     flex-direction: column;
