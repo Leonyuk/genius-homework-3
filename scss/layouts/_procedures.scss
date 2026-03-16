@@ -1,0 +1,140 @@
+.procedures {
+  padding: 20px 0 20px;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding: 56px 0 48px;
+  }
+
+  .container-box {
+    width: 100%;
+    max-width: 1288px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .titel-name {
+    margin: 0 auto 24px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--color-secondary-dark);
+
+    span {
+      color: var(--color-brand);
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      font-size: 64px;
+      font-weight: 700;
+      margin-bottom: 48px;
+    }
+  }
+
+  &__slider {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 32px;
+    }
+  }
+
+  &__container {
+    overflow: hidden;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__proc-windows {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 100%;
+    height: 416px;
+    padding-bottom: 32px;
+    margin: 0 auto;
+    border-radius: 4px 120px 4px 120px;
+
+    transition: transform 0.2s ease;
+    cursor: pointer;
+
+    @media screen and (min-width: $bp-desktop) {
+      width: 344px;
+      height: 456px;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(
+        180deg,
+        rgba(1, 28, 68, 0) 45%,
+        rgba(1, 28, 68, 0.73) 100%
+      );
+      z-index: 1;
+      transition: background-image 0.4s ease-in-out;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      &:hover::before {
+        background-image: linear-gradient(
+          180deg,
+          rgba(1, 28, 68, 0.1) 40%,
+          rgba(1, 28, 68, 0.9) 100%
+        );
+      }
+    }
+  }
+
+  &__proc-img-fon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  &__text-proc {
+    position: relative;
+    z-index: 2;
+    max-width: 136px;
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.18;
+    text-align: center;
+    margin-bottom: 0;
+    color: var(--color-primary-light);
+
+    @media screen and (min-width: $bp-desktop) {
+      max-width: 152px;
+      font-size: 22px;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+    }
+  }
+}

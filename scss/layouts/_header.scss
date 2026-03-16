@@ -1,0 +1,97 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 100%;
+  z-index: 100;
+
+  @media screen and (min-width: $bp-desktop) {
+    left: 0;
+    top: 0;
+    padding: 32px 0;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 40px;
+    }
+  }
+
+  &__logo {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 0.95;
+    text-transform: capitalize;
+    color: var(--color-brand);
+    text-decoration: none;
+    flex-shrink: 0;
+
+    @media screen and (min-width: $bp-desktop) {
+      font-size: 22px;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 56px;
+      flex-grow: 1;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__address {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+    }
+  }
+
+  &__burger {
+    width: 24px; 
+    height: 24px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    fill: var(--color-primary-light);
+    
+    @media screen and (min-width: $bp-desktop) {
+      display: none;
+    }
+  }
+}
+  .socials--header {
+    gap: 32px;
+
+    .socials__icon {
+      width: 32px;
+      height: 32px;
+      fill: var(--color-secondary-dark);
+    }
+
+    .socials__link:hover {
+      fill: var(--color-primary-dark);
+    }
+  }
+

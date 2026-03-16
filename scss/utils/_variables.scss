@@ -1,0 +1,22 @@
+:root {
+  --color-brand: #2b7fff;
+  --color-primary-dark: #000000;
+  --color-primary-light: #ffffff;
+  --color-secondary-dark: #011c44;
+  --color-secondary-grey: #4a4a4a;
+  --color-background-footer: #011f4a;
+  --color-background-procedure-card: #d9d9d9;
+  --color-modal-form: #747272;
+  --color-star-active: #7df9ff;
+  --font-title: "Play", sans-serif;
+  --font-main: "Roboto", sans-serif;
+  --h1-size: 64px;
+  --h2-size: 32px;
+  --h3-size: 22px;
+  --h4-size: 22px;
+  --h5-size: 18px;
+}
+
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1280px;

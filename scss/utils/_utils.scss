@@ -1,0 +1,30 @@
+.visually_hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0px auto;
+  padding: 0px 24px;
+}
+
+.wave {
+  background-image: url(../images/img/background.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  padding: 100px 0 0;
+
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url("../images/img/background@2x.png");
+  }
+}

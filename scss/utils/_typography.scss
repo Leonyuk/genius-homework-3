@@ -1,0 +1,19 @@
+.section-title {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 64px;
+  color: var(--color-secondary-dark);
+
+  &--centered {
+    text-align: center;
+  }
+}
+
+.text-brand {
+  color: var(--color-brand);
+}
+
+.text-bold {
+  font-weight: 600;
+  text-transform: capitalize;
+}

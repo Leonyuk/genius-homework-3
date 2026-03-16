@@ -1,0 +1,28 @@
+.button {
+  display: block;
+  margin: 0 auto;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.modal-btn-open {
+  cursor: pointer;
+}
+
+.modal__btn-close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s;
+
+  &__btn-close:hover,
+  &__btn-close:focus {
+    transform: scale(1.1);
+  }
+}
