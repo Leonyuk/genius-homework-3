@@ -1,5 +1,6 @@
+
 .footer {
-  padding: 56px 0;
+  padding: 32px 0;
   position: relative;
   text-align: center;
   background-color: var(--color-secondary-dark);
@@ -8,9 +9,10 @@
   background-size: cover;
   background-position: center bottom;
   overflow: hidden;
-  margin: 0px;
+  margin: 0;
 
   @media screen and (min-width: $bp-tablet) {
+     padding: 56px 0;
     text-align: left;
     background-image: url(../images/img/bg-footer.png);
   }
@@ -32,23 +34,116 @@
   }
 
   &__container {
+    display: grid;
+    gap: 16px;
+    justify-items: center;
+
+    grid-template-areas:
+      "logo"
+      "nav"
+      "policy"
+      "social"
+      "copyright";
+  }
+
+  &__nav,
+  &__address,
+  &__contacts,
+  &__legal {
+    display: contents;
+  }
+
+  &__logo {
+    grid-area: logo;
+    margin-bottom: 0;
+  }
+
+  &__menu {
+    grid-area: nav;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 16px;
-    @media screen and (min-width: $bp-tablet) {
+  }
+
+  &__socials {
+    grid-area: social;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__policy {
+    grid-area: policy;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-primary-light);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-primary-dark);
+    }
+  }
+
+  &__copyright {
+    grid-area: copyright;
+    color: var(--color-secondary-grey);
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  &__address-list {
+    display: none;
+  }
+
+  @media screen and (min-width: $bp-tablet) {
+    &__container {
+      display: flex;
       flex-direction: row;
       align-items: flex-start;
       justify-content: space-between;
       gap: 20px;
     }
-  }
 
-  &__logo {
-    margin-bottom: 42px;
-    font-size: 16px;
-    line-height: 0.94;
-    @media screen and (min-width: $bp-tablet) {
+    &__nav,
+    &__address {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      flex-basis: 50%;
+    }
+
+    &__contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex-grow: 1;
+    }
+
+    &__legal {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex-grow: 1;
+    }
+
+    &__address-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &__socials {
+      justify-content: flex-start;
+      gap: 24px;
+    }
+
+    &__logo {
+      margin-bottom: 42px;
       font-family: var(--font-title);
       font-weight: 700;
       font-size: 24px;
@@ -57,77 +152,5 @@
       color: var(--color-brand);
       flex-grow: 1;
     }
-  }
-
-  &__menu {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    flex-grow: 1;
-    justify-content: start;
-  }
-
-  &__nav,
-  &__address {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media screen and (min-width: $bp-tablet) {
-      flex-direction: row;
-      align-items: flex-start;
-      flex-basis: 50%;
-      // gap: 16px;
-    }
-  }
-
-  &__contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    flex-grow: 1;
-  }
-
-  &__address-list {
-    display: none;
-    @media screen and (min-width: $bp-tablet) {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-  }
-
-  &__socials {
-    display: flex;
-    justify-content: center;
-    @media screen and (min-width: $bp-tablet) {
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: flex-start;
-      padding: 0px;
-      gap: 24px;
-    }
-  }
-
-  &__legal {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  &__policy {
-    font-weight: 400;
-    font-size: 16px;
-    color: var(--color-primary-light);
-    text-decoration: none;
-    &:hover {
-      color: var(--color-primary-dark);
-    }
-  }
-  &__copyright {
-    color: var(--color-secondary-grey);
-    font-size: 13px;
-    font-weight: 400;
-    text-decoration: none;
   }
 }

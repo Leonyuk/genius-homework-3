@@ -1,4 +1,3 @@
-
 .contact-form {
   position: relative;
   width: 100%;
@@ -37,42 +36,32 @@
     margin-bottom: 16px;
   }
 
-  &__button {
+    &__button {
+    display: block;
+    width: 100%;
+    max-width: 240px;
+    height: 54px;
     margin: 0 auto 8px;
-    padding: 12px 24px;
-    width: 241px;
-    height: 44px;
-    border-radius: 24px;
-    font-weight: 600;
-    font-size: 15px;
+    padding: 16px 32px;
     border: 2px solid var(--color-brand);
     background-color: var(--color-brand);
+    border-radius: 48px;
     color: var(--color-primary-light);
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition:
+      background-color 0.2s,
+      color 0.2s;
 
-    @media screen and (min-width: $bp-desktop) {
-      display: block;
-      width: 100%; 
-      margin: 0 auto 8px;
-      padding: 16px 32px;
-      height: auto; 
-      min-height: 54px;
-      border: 2px solid var(--color-brand);
-      background-color: var(--color-brand);
-      border-radius: 48px;
-      color: var(--color-primary-light);
-      font-weight: 600;
-      font-size: 18px;
-      cursor: pointer;
-      transition:
-        background-color 0.2s,
-        color 0.2s,
-        border-color 0.2s;
+    @media (min-width: $bp-tablet) {
+      max-width: 280px;
+      font-size: 16px;
+    }
 
-      &:hover {
-        background-color: transparent;
-        color: var(--color-primary-light);
-        border-color: var(--color-primary-light);
-      }
+    &:hover {
+      background-color: transparent;
+      color: var(--color-primary-dark);
     }
   }
 }
